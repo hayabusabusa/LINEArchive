@@ -23,8 +23,17 @@ let package = Package(
             name: "OnboardingFeature",
             dependencies: [],
             path: "./Sources/Features/OnboardingFeature"),
-        .target(name: "Core",
-                dependencies: []),
+        .target(
+            name: "Core",
+            dependencies: []),
+        .target(
+            name: "Domain",
+            dependencies: [
+                "DomainProtocol"
+            ]),
+        .target(
+            name: "DomainProtocol",
+            dependencies: []),
         .testTarget(
             name: "PackageTests",
             dependencies: []),
