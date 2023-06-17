@@ -5,6 +5,7 @@
 //  Created by Shunya Yamada on 2023/06/17.
 //
 
+import OnboardingFeature
 import UIKit
 
 /// アプリの起動経路を管理する Coordinator.
@@ -22,14 +23,13 @@ public final class AppCoordinator {
         defer {
             window.makeKeyAndVisible()
         }
-        window.rootViewController = UIViewController()
 
         switch launchType {
         case .normal:
-            return
+            window.rootViewController = OnboardingViewController()
         case .openURL(let url):
             print(url)
-            return
+            window.rootViewController = UIViewController()
         }
     }
 }

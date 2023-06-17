@@ -15,7 +15,9 @@ let package = Package(
     targets: [
         .target(
             name: "AppFeature",
-            dependencies: [],
+            dependencies: [
+                "OnboardingFeature"
+            ],
             path: "./Sources/Features/AppFeature"),
         .target(
             name: "OnboardingFeature",
