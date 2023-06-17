@@ -24,6 +24,12 @@ let package = Package(
             dependencies: [],
             path: "./Sources/Features/OnboardingFeature"),
         .target(
+            name: "ShareTextFeature",
+            dependencies: [
+                "DomainProtocol"
+            ],
+            path: "./Sources/Features/ShareTextFeature"),
+        .target(
             name: "Core",
             dependencies: []),
         .target(
