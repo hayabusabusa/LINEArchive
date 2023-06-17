@@ -6,6 +6,7 @@
 //
 
 import OnboardingFeature
+import ShareTextFeature
 import UIKit
 
 /// アプリの起動経路を管理する Coordinator.
@@ -29,7 +30,7 @@ public final class AppCoordinator {
             window.rootViewController = OnboardingViewController()
         case .openURL(let url):
             print(url)
-            window.rootViewController = UIViewController()
+            window.rootViewController = ShareTextViewController()
         }
     }
 }
